@@ -2,19 +2,19 @@ import { Global, Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { LoggerModule } from '@app/logger/logger.module';
 
-import { TwoFAConfig } from './config/twoFA.config';
-import { TwoFAService } from './services/twoFA.service';
+import { TwoFaConfig } from './config/two-fa.config';
+import { TwoFaService } from './services/two-fa.service';
 
 @Global()
 @Module({
   imports: [ConfigModule, LoggerModule],
   providers: [
     //config
-    TwoFAConfig,
+    TwoFaConfig,
 
     // services
-    TwoFAService,
+    TwoFaService,
   ],
-  exports: [TwoFAService],
+  exports: [TwoFaService],
 })
-export class TwoFAModule {}
+export class TwoFaModule {}

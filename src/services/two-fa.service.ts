@@ -4,14 +4,14 @@ import { Response } from 'express';
 import { authenticator } from 'otplib';
 import { toFileStream } from 'qrcode';
 
-import config from '../../../config';
-import { TwoFAConfig } from '../config/twoFA.config';
+import config from 'src/config';
+import { TwoFaConfig } from '../config/two-fa.config';
 import { GenerateTwoFAResource } from '../dto/resource/two-fa.resource';
 
 @Injectable()
-export class TwoFAService {
+export class TwoFaService {
   constructor(
-    private readonly twoFAConfig: TwoFAConfig,
+    private readonly twoFAConfig: TwoFaConfig,
     private readonly logger: LoggerService
   ) {}
 

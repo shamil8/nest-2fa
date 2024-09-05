@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
 @Injectable()
-export class TwoFAConfig {
+export class TwoFaConfig {
   public appName: string;
 
   constructor(private readonly configService: ConfigService) {
